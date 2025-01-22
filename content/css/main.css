@@ -1,163 +1,253 @@
-html { 
-    font-family: "EB Garamond", serif; 
-    font-size: 22px; 
-    line-height: 1.3em;
-    color: #2c3e50; /* Enhanced base text color */
-    background: #fcfcfc; /* Subtle off-white background */
+html {
+  font-family: "EB Garamond", serif;
+  font-size: 22px;
+  line-height: 1.3em;
+  color: #2c3e50;
+  /* Enhanced base text color */
+  background: #fcfcfc;
+  /* Subtle off-white background */
 }
 
-h1     { margin-bottom: 0.75rem; }
-h2, h3 { margin-bottom: 0.5rem; }
-section { margin-top: 1rem; }
-p, table, ol, ul, figure, aside, dl, hr { margin-bottom: 0.5rem; }
-
-sup, sub { line-height: 0; }
-svg.icon { width: 1rem; height: 1rem; vertical-align: middle; }
-
-h1, h2, h3 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    color: #3498db; /* Changed from #ba3925 to sky blue */
-    text-rendering: optimizeLegibility;
-    line-height: 1.1em; /* Slightly tighter line height */
-    letter-spacing: -0.02em; /* Subtle letter spacing */
+h1 {
+  margin-bottom: 0.75rem;
 }
 
-h1, h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
+h2,
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+p,
+table,
+ol,
+ul,
+figure,
+aside,
+dl,
+hr {
+  margin-bottom: 0.5rem;
+}
+
+sup,
+sub {
+  line-height: 0;
+}
+
+svg.icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #3498db;
+  /* Changed from #ba3925 */
+  text-rendering: optimizeLegibility;
+  line-height: 1em;
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
 
 /* Enhanced header hover effects */
-section:target > :is(h1, h2, h3) { 
-    position: relative;
-    transition: color 0.3s ease;
+section:target> :is(h1, h2, h3) {
+  position: relative;
+  transition: color 0.3s ease;
 }
-section:target > :is(h1, h2, h3)::before { 
-    position: absolute; 
-    left: -1.2ch; 
-    content: "§";
-    color: #2980b9; /* Slightly darker blue for section marker */
+
+section:target> :is(h1, h2, h3)::before {
+  position: absolute;
+  left: -1.2ch;
+  content: "§";
+  color: #2980b9;
+  /* Slightly darker blue for section marker */
 }
-:is(h1, h2, h3) > a { 
-    color: inherit; 
-    text-decoration: none;
-    transition: all 0.3s ease;
+
+:is(h1, h2, h3)>a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-:is(h1, h2, h3) > a:hover { 
-    color: #2980b9; /* Darker blue on hover */
-    text-decoration: none;
+
+:is(h1, h2, h3)>a:hover {
+  color: #2980b9;
+  /* Darker blue on hover */
+  text-decoration: none;
 }
 
 /* Enhanced Block Elements */
-img, video { 
-    display: inline-block; 
-    vertical-align: middle; 
-    max-width: 100%; 
-    height: auto;
-    border-radius: 4px; /* Subtle rounding */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+img,
+video {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  /* Subtle rounding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
 
-p { 
-    hyphens: auto; 
-    -webkit-hyphens: auto; 
-    text-align: justify;
-    line-height: 1.5; /* Enhanced readability */
+p {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-align: justify;
+  line-height: 1.5;
+  /* Enhanced readability */
 }
 
-figure.blockquote { 
-    padding-left: 1.5em; 
-    border-left: 3px solid #3498db; /* Changed to sky blue */
-    color: #34495e; /* Darker text for quotes */
-    font-style: italic;
+figure.blockquote {
+  padding-left: 1em;
+  border-left: 3px solid #3498db;
+  font-style: italic;
 }
 
-table { 
-    border-collapse: collapse; 
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+/* Changed from #ba3925 */
+table {
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
-table, td, th { 
-    border: 1px solid #e1e1e1; /* Lighter border */
-}
-td, th { 
-    padding: 0.75em 1em; /* More generous padding */
-}
+
+table,
+td,
 th {
-    background: #f8f9fa; /* Subtle header background */
+  border: 1px solid #e1e1e1;
+  /* Lighter border */
+}
+
+td,
+th {
+  padding: 0.75em 1em;
+  /* More generous padding */
+}
+
+th {
+  background: #f8f9fa;
+  /* Subtle header background */
 }
 
 /* Enhanced List Styles */
-ol, ul, dd { 
-    margin-left: 3ch;
-    line-height: 1.4;
-}
-ul { 
-    list-style-type: circle;
-}
-.roman { 
-    list-style-type: lower-roman;
+ol,
+ul,
+dd {
+  margin-left: 3ch;
+  line-height: 1.4;
 }
 
-dt { 
-    font-weight: 600;
-    color: #2980b9; /* Sky blue */
+ul {
+  list-style-type: circle;
+}
+
+.roman {
+  list-style-type: lower-roman;
+}
+
+dt {
+  font-weight: 600;
+  color: #2980b9;
+  /* Sky blue */
 }
 
 /* Enhanced Admin Notice */
-aside.admn { 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center;
-    padding: 1em;
-    background: #f8f9fa;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-aside.admn > svg.icon { 
-    flex-shrink: 0; 
-    width: 2rem; 
-    height: 2rem; 
-    fill: #3498db; /* Changed to sky blue */
-}
-aside.admn.warn > svg.icon { 
-    fill: #e74c3c; /* Kept red for warnings */
+aside.admn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+  background: #f8f9fa;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Rest of the CSS remains the same, just updating vermilion colors to sky blue (#3498db) where applicable */
+aside.admn>svg.icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  fill: #3498db;
+  /* Changed to sky blue */
+}
+
+aside.admn.warn>svg.icon {
+  fill: #e74c3c;
+  /* Kept red for warnings */
+}
+
+
+aside.block>.title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #7a2518;
+  /* Kept original date color */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+figcaption.title {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #7a2518;
+  /* Kept original date color */
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
 
 /* Enhanced Code Block */
-figure.code-block > pre > code {
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto;
-    overflow-y: clip;
-    counter-reset: line;
-    background: #f8f9fa;
-    padding: 1em;
-    border-radius: 6px;
-    font-size: 0.85em;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+figure.code-block>pre>code {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: clip;
+  counter-reset: line;
+  background: #f8f9fa;
+  padding: 1em;
+  border-radius: 6px;
+  font-size: 0.85em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Enhanced Links */
-a { 
-    text-decoration-color: #3498db;
-    color: #2c3e50;
-    transition: all 0.3s ease;
+a {
+  text-decoration-color: #3498db;
+  color: #2c3e50;
+  transition: all 0.3s ease;
 }
-a:hover, a:focus { 
-    color: #3498db;
-    fill: #3498db;
+
+a:hover,
+a:focus {
+  color: #3498db;
+  fill: #3498db;
 }
 
 /* Post List Enhancement */
-.post-list a { 
-    color: #3498db; /* Changed from vermilion */
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
+.post-list a {
+  color: #3498db;
+  /* Changed from vermilion */
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
 }
-.post-list a:hover { 
-    color: #2980b9;
-    text-decoration: underline;
+
+.post-list a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }
+
+

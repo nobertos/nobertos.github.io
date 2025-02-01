@@ -8,4 +8,4 @@ $ deno task build
 $ deno task serve
 ```
 
-credit: ![https://github.com/matklad/][matklad]
+credit: [matklad](https://github.com/matklad)

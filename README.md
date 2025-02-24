@@ -7,3 +7,5 @@ Source code for the blog. The `./src` directory contains a deno script that read
 $ deno task build
 $ deno task serve
 ```
+
+credit: [matklad](https://github.com/matklad)

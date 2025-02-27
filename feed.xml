@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<link href="https://nobertos.github.io/feed.xml" rel="self" type="application/atom+xml"/>
+<link href="https://nobertos.github.io" rel="alternate" type="text/html"/>
+<updated>2025-02-27T01:42:50.522Z</updated>
+<id>https://nobertos.github.io/feed.xml</id>
+<title type="html">nobertos</title>
+<subtitle>Yet another yet another programming blog by Rayene Nassim ZORGANI aka nobertos.</subtitle>
+<author><name>Rayene Nassim ZORGANI</name></author>
+
+<entry>
+<title type="text">My blog</title>
+<link href="https://nobertos.github.io/2025/01/21/welcome-to-my-blog.html" rel="alternate" type="text/html" title="My blog" />
+<published>2025-01-21T00:00:00+00:00</published>
+<updated>2025-01-21T00:00:00+00:00</updated>
+<id>https://nobertos.github.io/2025/01/21/welcome-to-my-blog</id>
+<author><name>Rayene Nassim ZORGANI</name></author>
+<summary type="html"><![CDATA[Hello and welcome to my blog, I am planning on sharing my journey of learning about distributed systems and low level programming :).]]></summary>
+<content type="html" xml:base="https://nobertos.github.io/2025/01/21/welcome-to-my-blog.html"><![CDATA[
+<h1><span>My blog</span> <time class="meta" datetime="2025-01-21">Jan 21, 2025</time></h1>
+<p><span>Hello and welcome to my blog, I am planning on sharing my journey of learning about distributed systems and low level programming :).</span></p>
+]]></content>
+</entry>
+
+</feed>

@@ -1,0 +1,35 @@
+# DiSE: Distributed Symmetric-key Encryption - Part 1
+
+Welcome to the firt part of a multi-part series where i will dissect [(Agrawal et al., 2018)](https://eprint.iacr.org/2018/727.pdf).
+
+In this first part, I will try explaining essential concepts such as definitions that will help us understand more the main contributions of this paper.
+
+## introduction
+
+This paper discusses ways and protocols to correctly implement threshold cryptography in a symmetric way, most of the studies done before this paper mostly focused on asymmetric cryptography, while there is a huge benefit to gain from using symmetric encryption as mentioned by the authors.
+
+### Some reviewed architectures
+
+a lot of systems benefit and are based on symmetric threshold, the papers site three Examples:
+
+- Secret Management Systems, such as the open source Keywhiz, Knox, and Hashicorp, these tools use a method called *authenticated encryption*, they use a key called *master key* to encrypt a large amount of data. Some tools try to improve security by splitting this master key among several parties during setup, using techniques like secret sharing. But once the system has started and the key is loaded into memory, it usually stays unprotected until the system is rebooted.
+
+	- Hashicorp vault at first is in a sealed state, when initialized, it generates an *encryption key* that is protected by a *root key*, The root key is itself encrypted using an unseal key that is split into multiple shares with Shamir’s Secret Sharing. To unseal Vault, a minimum number of shares must be provided to reconstruct the unseal key, which then decrypts the root key and allows access to the encryption key. Once unsealed, Vault can decrypt its data and operate normally. 
+  
+- Entreprise Network Authentication, for this section we have mainly Kerberos which is used to provide SSO, the way to get a ticket-granting ticket TGT in kerberos is to authenticate using a master key, which is now rendered as an important attack target
+
+- Multi-device IoT authentication, in this example the authors give a potential method to distribute secret key among multiple IoT/mobile devices, and since IoT devices usually have limited processing power, such distributed methods should be lightweight, requiring minimal communication and only simple cryptographic tools like block ciphers.
+
+## Definitions
+
+### Threshold cryptography
+
+The first definition that we need to explain is threshold cryptography, which is is a system that aims to encrypt a message using a public key then distribute it across multiple nodes, these nodes share generally the same private key, and they need to cooperate in order to decrypt the whole ciphertext. [Threshold cryptosystem - Wikipedia](https://en.wikipedia.org/wiki/Threshold_cryptosystem) 
+
+### Authenticated Encryption (AE)
+
+Classical authenticated encryption is an encryption scheme that simultaneously provides confidentiality and data authenticity, generally it is more complicated than confidentiality-only or authenticity-only scheme, but it is easier to use because you only need one key, more rubust and provides less freedom for the user to error ([block cipher - Why choose an authenticated encryption mode instead of a separate MAC? - Cryptography Stack Exchange](https://crypto.stackexchange.com/questions/923/why-choose-an-authenticated-encryption-mode-instead-of-a-separate-mac?rq=1)).
+
+Examples of encryption schemes that provide AE are [Galois/Counter Mode (GCM)](https://en.wikipedia.org/wiki/Galois/Counter_Mode) and [counter with cipher block chaining message authentication code (CCM mode)](https://en.wikipedia.org/wiki/CCM_mode).
+
+
